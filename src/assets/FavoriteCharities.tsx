@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import locationPic from "./location-846b6e1a.svg";
 interface Nonprofit {
   name: string;
   description: string;
@@ -78,7 +78,7 @@ function FavoriteCharities() {
                   <span className="flex items-center">
                     <img
                       className="mr-2 w-5 h-5"
-                      src="/src/assets/location-846b6e1a.svg"
+                      src={locationPic}
                     />
                     <div>{data.location}</div>
                   </span>

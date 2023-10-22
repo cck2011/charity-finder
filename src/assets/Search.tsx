@@ -21,7 +21,7 @@ function Search({ handleChange }: SearchBarInputProps) {
       setIsFocused(false);
     }, 200);
   };
-  console.log(filterData.length);
+  // console.log(filterData.length);
   return (
     <div className="drop-shadow-md mt-4 px-4 md:my-auto ">
       <div

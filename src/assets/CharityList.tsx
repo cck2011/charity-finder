@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import locationPic from "./location-846b6e1a.svg";
 interface SearchBarInputProps {
   value: string;
 }
@@ -20,7 +20,7 @@ interface jsonOutput {
 function CharityList(cause: SearchBarInputProps) {
   const [data, setData] = useState([]);
   const fetchSearch = async () => {
-    console.log("fetchCause", cause.value);
+    // console.log("fetchCause", cause.value);
 
     try {
         
@@ -28,7 +28,7 @@ function CharityList(cause: SearchBarInputProps) {
         `https://partners.every.org/v0.2/search/${cause.value}?apiKey=pk_live_974553a80624e25e5daac17280b11aa0`
       );
       const json = await response.json();
-      console.log(json.nonprofits);
+      // console.log(json.nonprofits);
       setData(json.nonprofits);
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -56,7 +56,7 @@ function CharityList(cause: SearchBarInputProps) {
                   <span className="flex items-center">
                     <img
                       className="mr-2 w-5 h-5"
-                      src="src/assets/location-846b6e1a.svg"
+                      src={locationPic}
                     />
                     <div>{data.location}</div>
                   </span>

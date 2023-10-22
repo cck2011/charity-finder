@@ -29,7 +29,6 @@ function CharityDetail({}) {
       let index = localArray.indexOf(data[0].name);
       if (favourite) {
         setFavourite(false);
-        console.log("localArray", localArray);
         localArray.splice(index, 1);
         localStorage.setItem("items", JSON.stringify(localArray));
       } else {
@@ -51,7 +50,7 @@ function CharityDetail({}) {
         `https://partners.every.org/v0.2/search/${id.id}?apiKey=pk_live_974553a80624e25e5daac17280b11aa0`
       );
       const json = await response.json();
-      console.log(json.nonprofits);
+      // console.log(json.nonprofits);
       setData(json.nonprofits);
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -64,7 +63,7 @@ function CharityDetail({}) {
     fetchSearch();
     let storedData = localStorage.getItem("items");
     let localArray: string[] = storedData ? JSON.parse(storedData) : [];
-    console.log('id.id',id.id);
+    // console.log('id.id',id.id);
     if (id.id) {
 
       let index = localArray.indexOf(id.id);
