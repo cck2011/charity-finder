@@ -23,7 +23,6 @@ export const CauseDetail = () => {
             `https://partners.every.org/v0.2/browse/${parm.Searchid}?apiKey=pk_live_974553a80624e25e5daac17280b11aa0`
           );
           const json = await response.json();
-          console.log('json.nonprofits=',json.nonprofits);
           setData(json.nonprofits);
         } catch (error) {
           if (axios.isAxiosError(error)) {
