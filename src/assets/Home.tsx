@@ -3,7 +3,7 @@ import Header from "./Header";
 import { useEffect, useState} from 'react';
 import CharityList from './CharityList';
 import topics from './type'
-import backgroundImg from './assets/background-5d85c526.jpg';
+const imageURL = 'https://charity-finder-l2trn41ee-cck2010s-projects.vercel.app/assets/background-5d85c526.jpg';
 
 function Home() {
     
@@ -20,7 +20,7 @@ function Home() {
     <div>
       <Header/>
       <div className="pb-4">
-        <div style={{ backgroundImage: `url(${backgroundImg})` }}
+        <div style={{ backgroundImage: `url(${imageURL})` }}
 
          className="flex items-center justify-center w-full h-96 bg-cover bg-center bg-[image:var(backgroundImage)]">
           <span className="text-center font-prompt tracking-wider text-[#F7F7F7] font-bold text-2xl sm:text-5xl">
