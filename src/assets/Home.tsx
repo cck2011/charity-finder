@@ -3,7 +3,8 @@ import Header from "./Header";
 import { useEffect, useState} from 'react';
 import CharityList from './CharityList';
 import topics from './type'
-import backgroundImg from './background-5d85c526.jpg'
+import backgroundImg from './assets/background-5d85c526.jpg';
+
 function Home() {
     
     const [cause, setCause] = useState("space");
