@@ -21,7 +21,9 @@ function Home() {
       <div className="pb-4">
         <div style={{ backgroundImage: `url(${backgroundImg})` }}
 
-         className="flex items-center justify-center w-full h-96 bg-cover bg-center bg-[url('\assets\background-5d85c526.jpg')]">
+         className="flex items-center justify-center w-full h-96 bg-cover bg-center bg-[url('./background-5d85c526.jpg')]">
+          {/* /assets/img become /assets/src/assets/img in vercel */}
+          {/* /img is still /img in vercel */}
           <span className="text-center font-prompt tracking-wider text-[#F7F7F7] font-bold text-2xl sm:text-5xl">
             Changing The World Through Kindness
           </span>
