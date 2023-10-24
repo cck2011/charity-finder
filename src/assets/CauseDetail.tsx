@@ -33,7 +33,7 @@ export const CauseDetail = () => {
       useEffect(() => {
         fetchSearch();
         
-      }, []);
+      }, [parm]);
       
   return (
     <>
