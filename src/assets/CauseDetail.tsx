@@ -40,7 +40,7 @@ export const CauseDetail = () => {
       <Header />
       <div className="container mx-auto">
         <h1 className="text-3xl pt-10 pl-6 tracking-wide font-semibold text-gray-800">
-          Search results for: aapi-led
+          Search results for: {parm.Searchid}
         </h1>
         <div className="flex items-center my-10 w-full">
           <div className="grid w-full justify-items-center grid-cols-1 gap-10 px-6 sm:grid-cols-1 lg:grid-cols-3">
